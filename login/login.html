@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Login Form</title>
+</head>
+
+<body>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+             $(document).ready(function(){
+			  $("#show").hide();
+			     $("#btn").click(function(){
+				   $("#btn").hide();
+				       $("#show").toggle(1500,function(){
+					       $("#login").click(function(){
+						       $("#show").hide(1500);
+							   $("#btn").show();
+						   })
+					   });
+				 });
+			 });
+</script>
+
+<div style="width:auto; height:auto; margin:0% 40%;">
+    <h2>Login Form</h2>
+	<button id="btn">Login</button><br />
+	<div style="width:200px; height:auto; background-color:#c6b089; float:left; margin:0px; padding:10px;" id="show">
+		<form action="#" method="post">
+			 <fieldset>
+				 <legend>Login Form:</legend>
+				 Username:<input type="text" placeholder="Write username"/><br />
+				 Password:<input type="text" placeholder="Write password"/><br /><br />
+				 <input type="submit" value="login" id="login"/>&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset" />
+			 </fieldset>
+		</form>	 
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
